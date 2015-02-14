@@ -6,7 +6,7 @@ class Admin::PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order(id: :desc)
     respond_with(@posts)
   end
 

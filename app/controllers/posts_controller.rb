@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.all
+    @posts = Post.is_released.order(released_date: :desc)
     respond_with(@posts)
   end
 

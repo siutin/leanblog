@@ -19,3 +19,6 @@
 ./tmp/*
 
 config/config.secret.yml
+
+public/assets/
+vendor/assets/
