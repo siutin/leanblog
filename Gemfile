@@ -45,3 +45,7 @@ gem 'passenger'
 group :development do
   gem 'sextant'
 end
+
+gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+
+gem "babosa"
