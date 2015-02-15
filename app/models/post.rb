@@ -13,4 +13,5 @@ class Post < ActiveRecord::Base
     :title
   end
 
+  validates_presence_of :title, :author_name, :content
 end

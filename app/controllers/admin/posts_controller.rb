@@ -24,8 +24,14 @@ class Admin::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.save
-    respond_with([:admin,@post])
+
+    respond_to do |format|
+      if @post.save
+        format.html { redirect_to [:admin,@post], notice: 'Post was successfully created.' }
+      else
+        format.html { render :new }
+      end
+    end
   end
 
   def update
